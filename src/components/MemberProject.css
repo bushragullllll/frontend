@@ -1,0 +1,55 @@
+/* Grid container for projects */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Project card */
+.project-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Project title */
+.project-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Project details text */
+.project-desc,
+.project-status,
+.project-managed,
+.project-due {
+  font-size: 0.95rem;
+  margin: 5px 0;
+}
+
+/* Status styling */
+.status-completed {
+  color: green;
+  font-weight: bold;
+}
+
+.status-pending {
+  color: #333;
+  font-weight: bold;
+}
+
+/* Download button */
+.download-btn {
+  margin-top: 10px;
+  font-size: 0.85rem;
+}

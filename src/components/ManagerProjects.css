@@ -1,0 +1,129 @@
+.manager-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.dashboard-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #333;
+}
+
+.notification {
+  background: #e0f7fa;
+  color: #00796b;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.create-project-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  margin-bottom: 30px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* CREATE BUTTON */
+.btn-create {
+  background-color: #0f64bf; /* blue background */
+  color: white;               /* white text */
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn-create:hover {
+  background-color: #084a8a; /* darker blue on hover */
+}
+
+/* PROJECT LIST */
+.projects-title {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.project-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+.project-info h5 {
+  margin: 0;
+  font-weight: 600;
+  color: #333;
+}
+
+.project-info p {
+  margin: 4px 0;
+  color: #555;
+  font-size: 14px;
+}
+
+/* DOWNLOAD BUTTON */
+.btn-download {
+  background-color: #28a745; /* green */
+  color: white;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  border: none;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.3s;
+}
+
+.btn-download:hover {
+  background-color: #1e7e34; /* darker green */
+}
+
+/* DELETE BUTTON */
+.btn-delete {
+  background-color: #dc3545; /* red */
+  color: white;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-delete:hover {
+  background-color: #a71d2a; /* darker red */
+}

@@ -1,0 +1,66 @@
+.banner {
+  background-color: white; /* black background */
+  color: #000; /* white text */
+  padding: 60px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255,255,255,0.05), rgba(255,255,255,0.15), rgba(255,255,255,0.05));
+  transform: rotate(-25deg);
+  animation: slide 6s linear infinite;
+}
+
+@keyframes slide {
+  0% { transform: translateX(-100%) rotate(-25deg); }
+  100% { transform: translateX(100%) rotate(-25deg); }
+}
+
+.banner-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.banner-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #050505;
+}
+
+.banner-buttons .btn {
+  text-decoration: none;
+  padding: 12px 28px;
+  margin: 0 10px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.primary-btn {
+  background-color: #fff;
+  color: #000;
+}
+
+.primary-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.secondary-btn {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.secondary-btn:hover {
+  background-color: #fff;
+  color: #000;
+}

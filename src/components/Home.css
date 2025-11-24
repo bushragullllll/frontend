@@ -1,0 +1,61 @@
+/* Grid container for tasks */
+.tasks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px; /* space between cards */
+  margin-top: 20px;
+}
+
+/* Each task card */
+.task-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.task-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* New task badge */
+.new-task {
+  border-left: 4px solid #28a745;
+}
+
+/* Task title */
+.task-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Task info text */
+.task-assigned,
+.task-project,
+.task-status,
+.task-due {
+  font-size: 0.95rem;
+  margin: 4px 0;
+}
+
+/* Status colors */
+.status-completed {
+  color: green;
+  font-weight: bold;
+}
+
+.status-pending {
+  color: #333;
+  font-weight: bold;
+}
+
+/* No tasks message */
+.no-tasks {
+  text-align: center;
+  font-size: 1rem;
+  color: #555;
+}
