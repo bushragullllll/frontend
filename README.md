@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 what i have learnt from the project.
 # Backend
 1. Authnetication and Authorization
@@ -32,3 +33,6 @@ what i have learnt from the project.
 10. how to deploy frontend using vercel 
 
 
+=======
+# project-manager-frontend
+>>>>>>> 18fe6db1074027210b7aa139d23f776d7468c15e
