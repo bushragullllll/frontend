@@ -1,102 +1,102 @@
 import axios from "axios";
 
 // ===================== BACKEND URL =====================
-// const API_URL = "http://localhost:5000/api"; // old local backend URL
-const API_URL = "https://backend-production-81c5.up.railway.app/api"; // Railway backend URL
+//const API_URL = "http://localhost:5000/api"; // local backend
+ const API_URL = "https://backend-production-81c5.up.railway.app/api"; // Railway backend
 
 // ===================== USER API =====================
 
 // Register user
 export const registerUser = async (userData) => {
-  const response = await axios.post(`${API_URL}/users/signup`, userData);
+  const response = await axios.post(`${API_URL}/users/signup`, userData, {
+    withCredentials: true, // ✅ important for cookies
+  });
   return response.data;
 };
 
 // Login user
 export const loginUser = async (loginData) => {
-  const response = await axios.post(`${API_URL}/users/login`, loginData);
+  const response = await axios.post(`${API_URL}/users/login`, loginData, {
+    withCredentials: true, // ✅ important for cookies
+  });
   return response.data;
 };
 
 // Tasks API
-export const getTasks = async (token) => {
+export const getTasks = async () => {
   const res = await axios.get(`${API_URL}/tasks`, {
-    headers: { Authorization: `Bearer ${token}` },
+    withCredentials: true, // ✅ cookie sent automatically
   });
   return res.data;
 };
 
-export const createTask = async (taskData, token) => {
+export const createTask = async (taskData) => {
   const res = await axios.post(`${API_URL}/tasks`, taskData, {
-    headers: { Authorization: `Bearer ${token}` },
+    withCredentials: true,
   });
   return res.data;
 };
 
-export const deleteTask = async (taskId, token) => {
+export const deleteTask = async (taskId) => {
   const res = await axios.delete(`${API_URL}/tasks/${taskId}`, {
-    headers: { Authorization: `Bearer ${token}` },
+    withCredentials: true,
   });
   return res.data;
 };
 
-export const getMyTasks = async (userName, token) => {
+export const getMyTasks = async (userName) => {
   const res = await axios.get(`${API_URL}/tasks/my-tasks/${userName}`, {
-    headers: { Authorization: `Bearer ${token}` },
+    withCredentials: true,
   });
   return res.data;
 };
 
-export const updateTask = async (taskId, updatedData, token) => {
+export const updateTask = async (taskId, updatedData) => {
   const res = await axios.put(`${API_URL}/tasks/${taskId}`, updatedData, {
-    headers: { Authorization: `Bearer ${token}` },
+    withCredentials: true,
   });
   return res.data;
 };
 
 // Comments API
-export const getComments = async (token) => {
+export const getComments = async () => {
   const res = await axios.get(`${API_URL}/comments`, {
-    headers: { Authorization: `Bearer ${token}` },
+    withCredentials: true,
   });
   return res.data;
 };
 
-export const createComment = async (commentData, token) => {
+export const createComment = async (commentData) => {
   const res = await axios.post(`${API_URL}/comments`, commentData, {
-    headers: { Authorization: `Bearer ${token}` },
+    withCredentials: true,
   });
   return res.data;
 };
 
 // Projects API
-export const getProjects = async (token) => {
+export const getProjects = async () => {
   const res = await axios.get(`${API_URL}/projects`, {
-    headers: { Authorization: `Bearer ${token}` },
+    withCredentials: true,
   });
   return res.data;
 };
 
-export const createProject = async (formData, token) => {
+export const createProject = async (formData) => {
   await axios.post(`${API_URL}/projects`, formData, {
-    headers: {
-      Authorization: `Bearer ${token}`,
-      "Content-Type": "multipart/form-data",
-    },
+    withCredentials: true,
+    headers: { "Content-Type": "multipart/form-data" },
   });
 };
 
-export const deleteProject = async (id, token) => {
+export const deleteProject = async (id) => {
   await axios.delete(`${API_URL}/projects/${id}`, {
-    headers: { Authorization: `Bearer ${token}` },
+    withCredentials: true,
   });
 };
 
-export const updateProject = async (id, formData, token) => {
+export const updateProject = async (id, formData) => {
   await axios.put(`${API_URL}/projects/${id}`, formData, {
-    headers: {
-      Authorization: `Bearer ${token}`,
-      "Content-Type": "multipart/form-data",
-    },
+    withCredentials: true,
+    headers: { "Content-Type": "multipart/form-data" },
   });
 };
