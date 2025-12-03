@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // ===================== BACKEND URL =====================
-//const API_URL = "http://localhost:5000/api"; // local backend
+
  const API_URL = "https://backend-production-81c5.up.railway.app/api"; // Railway backend
 
 // ===================== USER API =====================
